@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "ATC Confluence Publisher",
+  "version": "0.1.0",
+  "description": "Publish cleaned Word content to ATC Confluence pages.",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://atc.bmw-brilliance.cn/confluence/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://atc.bmw-brilliance.cn/confluence/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "action": {
+    "default_title": "ATC Confluence Publisher"
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>ATC Confluence Publisher</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="app">
+    <h1>ATC Confluence Publisher</h1>
+
+    <section class="card">
+      <h2>1. 当前页面</h2>
+      <button id="getPageInfoBtn">读取当前页面信息</button>
+      <pre id="pageInfo"></pre>
+    </section>
+
+    <section class="card">
+      <h2>2. 登录态测试</h2>
+      <button id="testAuthBtn">测试 Confluence 登录态</button>
+      <pre id="authResult"></pre>
+    </section>
+
+    <section class="card">
+      <h2>3. 子目录测试</h2>
+      <input id="parentPageId" placeholder="输入父页面 pageId">
+      <button id="loadChildrenBtn">读取子页面</button>
+      <pre id="childrenResult"></pre>
+    </section>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
